@@ -4,13 +4,15 @@ import app from "../api/server.mjs";
 
 
 describe('API Test', ()=>{
-    it('Root path', ()=>{
-        return request(app)
+    it('Root path', (done)=>{
+        request(app)
             .get("/")
-            .expect('Content-Type', /json/)
             .expect(200)
-            .then((res) => {
+            .expect('Content-Type', /json/)
+            .end((err,res)=>{
+                if (err) done (err);
                 expect(res.statusCode).to.equals(200);
+                done();
             });
     });
 });
