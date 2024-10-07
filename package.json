@@ -1,0 +1,30 @@
+{
+  "name": "cms-server",
+  "version": "1.0.0",
+  "description": "CMS API Server component",
+  "main": "server.mjs",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --exit",
+    "start": "node api/server.mjs",
+    "dev": "nodemon api/server.mjs"
+  },
+  "keywords": [
+    "cms",
+    "server",
+    "api"
+  ],
+  "author": "Eduardo André de Lima Carneiro (eandre.carneiro@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3"
+  }
+}
